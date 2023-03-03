@@ -10,6 +10,7 @@ html {
     --primary-text-color : #000;
     --color-hover : orange;
     --primary-text-title: #fff;
+    --cards-color: #698AD9;
 }
 .page {
     background-color: var(--primary-text-title);
@@ -33,31 +34,22 @@ html {
     margin: 0;
 }
 .container {
-    width: 1339px;
+    width: 1400px;
     margin: 0 auto;
-    padding-left: 15px;
-    padding-right: 15px;
     outline: 2px solid chartreuse;
 }
 /*шапка сайта*/
-.up {
-    display: flex;
-    
-}
-.up li {
-    margin-right: 101px;
-}
-.down {
-    display: flex;
-}
-.down li{
-    margin-right: 54px;
+.page-header img {
+    width: 400px;
+    height: 400px;
+    background-color: var(--cards-color);
 }
 .page-header {
     padding-top: 100px;
     padding-bottom: 100px;
     display: flex;
-    background-color: aquamarine;
+    justify-content: space-around;
+    align-items: center;
 }
 .page-header p {
     font-family: Lora;
@@ -65,20 +57,25 @@ html {
     font-size: 20px;
     line-height: 1.3;
     line-height: 100%;
-    align-items: left;
-    vertical-align: top;
 
     margin: 0;
+}
+.retreat {
+    width: 655px;
+    height: 308px;
+}
+.retreat p:not(:last-child) {
+    margin-bottom: 20px;
+}
+.container .text-color {
+    background-color: #202020;
+    margin-top: 0;
+    margin-bottom: 0;
 }
 /*Moodboard*/
 .moodboard {
     padding-top: 100px;
     padding-bottom: 100px;
-}
-.text-color {
-    background-color: #202020;
-    margin-top: 0;
-    margin-bottom: 0;
 }
 .moodboard-link {
     color: #3E57F3;
@@ -101,7 +98,7 @@ html {
     padding: 0;
 }
 /*text-color*/
-.text-color {
+.text-color{
     padding-top: 100px;
     padding-bottom: 100px;
 }
@@ -109,7 +106,7 @@ html {
     margin: 0;
     padding: 0;
 }
-.text li {
+.text li:not(:last-child){
     margin-right: 182px;
 }
 .text h2 {
@@ -118,7 +115,6 @@ html {
     font-size: 20px;
     line-height: 1.1;
 
-    
     margin-top: 0;
     margin-bottom: 60px;
     text-align: center;
@@ -128,6 +124,8 @@ html {
     margin: 0;
     padding: 0;
     display: flex;
+    text-align: center;
+    justify-content: space-around;
 }
 .color {
     margin-top: 150px;
@@ -143,7 +141,20 @@ html {
 .color p {
     margin: 0;
 }
-
+.up {
+    display: flex;
+    justify-content: space-around;
+}
+.up li:not(:last-child){
+    margin-right: 101px;
+}
+.down {
+    display: flex;
+    justify-content: space-around;
+}
+.down li:not(:last-child){
+    margin-right: 54px;
+}
 .philosopher p {
     font-family: Philosopher;
     font-style: bold;
@@ -197,18 +208,20 @@ html {
 }
 /*galery*/
 .galery img{
-    width: 1299px;
+    width: 1400px;
 }
-/*sotial*/
 .container .sotial {
     margin: 0;
     padding: 0;
 }
-.sotial ul {
+.sotial-item {
     margin: 0;
     padding: 0;
     display: flex;
+    align-items: center;
+    justify-content: space-around;
 }
+
 .sotial {
     margin: 0;
     padding: 0;
@@ -276,10 +289,13 @@ html {
     margin: 0;
     padding: 0;
 }
+.priority li {
+    display: flex;
+}
 /*cards*/
 .cards {
     padding-top: 100px;
-    padding-bottom: 70px;
+    padding-bottom: 100px;
 }
 .cards h2 {
     font-family: Philosopher;
@@ -297,6 +313,7 @@ html {
     line-height: 1.28;
     text-align: center;
     vertical-align: top;
+    color: var(--primary-text-title);
 
     margin: 0;
     margin-bottom: 30px;
@@ -306,12 +323,23 @@ html {
     margin: 0;
     display: flex;
 }
+.cards-item li {
+    width: 350px;
+    height: 350px;
+    padding: 35px 25px;
+    background-color: var(--cards-color);
+    
+}
+.cards-item li:not(:last-child){
+    margin-right: 55px;
+}
 .cards-item p {
     font-family: Lora;
     font-size: 20px;
     line-height: 1.3;
     text-align: left;
     vertical-align: top;
+    color: var(--primary-text-title);
 
     margin: 0;
     margin-bottom: 16px;
@@ -326,15 +354,12 @@ html {
     margin: 0;
 }
 /*hero*/
-.hero{
+.hero {
     padding-top: 100px;
     padding-bottom: 100px;
 }
 .hero-text {
     display: flex;
-}
-.hero-text-bottom p {
-    
 }
 .hero h1{
     font-family: Philosopher;
@@ -345,6 +370,7 @@ html {
     vertical-align: top;
 
     margin: 0;
+    margin-left: 155px;
     margin-bottom: 70px;
 }
 .hero p {
@@ -356,6 +382,7 @@ html {
     vertical-align: top;
 
     margin: 0;
+    margin-left: 155px;
     margin-bottom: 15px;
 }
 
@@ -409,27 +436,41 @@ html {
     margin: 0;
     margin-bottom: 70px;
 }
-.program ul {
-    margin: 0;
-    padding: 0;
-}
 .program h3 {
     font-family: Lora;
     font-style: Bold;
     font-size: 32px;
     line-height: 1.28;
-    text-align: center;
+    text-align: left;
     
     margin: 0;
-    margin-bottom: 35px;
+    margin-right: 172px;
+    width: 676px;
 }
-.program p {
+.program-text-title {
     font-family: Lora;
     font-size: 20px;
     line-height: 1.3;
     text-align: center;
     
     margin: 0;
+    margin-left: 350px;
+    margin-bottom: 40px;
+    width: 676px;
+}
+.program-list p{
+    font-family: Lora;
+    font-size: 20px;
+    line-height: 1.3;
+    text-align: left;
+    
+    margin: 0;
+    padding: 0;
+    width: 676px;
+}
+.program-list li {
+    display: flex;
+    justify-content: center;
     margin-bottom: 35px;
 }
 .program-title-foto{
@@ -458,21 +499,28 @@ html {
     margin: 0;
     margin-bottom: 70px;
 }
-.priority-card ul {
+.priority-card-item {
     margin: 0;
     padding: 0;
     margin-bottom: 60px;
     display: flex;
 }
-.priority li {
-    display: flex;
+.priority-card-item li {
+    width: 350px;
+    height: 350px;
+    padding: 25px 15px;
+    background-color: var(--cards-color);
+}
+.priority-card-item li:not(:last-child) {
+    margin-right: 35px;
 }
 .priority-card h3 {
     font-family: Lora;
     font-style: Bold;
     font-size: 32px;
     line-height: 1.28;
-    text-align: left;
+    text-align: center;
+    color: var(--primary-text-title);
     
     margin: 0;
     margin-bottom: 25px;
@@ -485,6 +533,7 @@ html {
     font-size: 20px;
     line-height: 1.3;
     text-align: left;
+    color: var(--primary-text-title);
 }
 .priority-card .item {
     font-family: Lora;
@@ -534,6 +583,13 @@ html {
     padding-top: 100px;
     padding-bottom: 100px;
 }
+.questions li {
+    display: flex;
+    justify-content: center;
+}
+.questions li:not(:last-child){
+    margin-bottom: 35px;
+}
 .questions ul {
     padding: 0;
     margin: 0;
@@ -561,10 +617,11 @@ html {
     font-family: Lora;
     font-size: 32px;
     line-height: 1.28;
-    text-align: center;
+    text-align: left;
     
     margin: 0;
-    margin-bottom: 35px;
+    width: 736px;
+    margin-right: 112px;
 }
 /*футер*/
 .footer {
@@ -582,7 +639,9 @@ html {
     text-align: left;
     vertical-align: top;
 }
-.item p {
+.item {
+    width: 314px;
+    height: 130px;
     margin: 0;
 }
 .footer-item {
@@ -594,6 +653,8 @@ html {
     vertical-align: top;
 }
 .footer-item p {
+    width: 459px;
+    height: 82px;
     margin: 0;
 }
 .designed {
@@ -607,4 +668,6 @@ html {
     margin: 0;
     padding: 0;
     display: flex;
+    align-items: center;
+    justify-content: space-around;
 }
