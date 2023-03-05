@@ -11,6 +11,7 @@ html {
     --color-hover : orange;
     --primary-text-title: #fff;
     --cards-color: #698AD9;
+    --primary-section-color: #1D2432;
 }
 .page {
     background-color: var(--primary-text-title);
@@ -259,7 +260,7 @@ html {
 }
 /*priority*/
 .priority {
-    background-color: #1D2432;
+    background-color: var(--primary-section-color);
     padding-top: 87px;
     padding-bottom: 100px;
 }
@@ -324,9 +325,8 @@ html {
     display: flex;
 }
 .cards-item li {
-    width: 350px;
-    height: 350px;
-    padding: 35px 25px;
+    width: calc((100% -150px) / 4);
+    padding: 50px 25px;
     background-color: var(--cards-color);
     
 }
@@ -364,13 +364,13 @@ html {
 .hero h1{
     font-family: Philosopher;
     font-style: Bold;
-    font-size: 95px;
+    font-size: 75px;
     line-height: 1;
     text-align: center;
-    vertical-align: top;
 
     margin: 0;
-    margin-left: 155px;
+    margin-left: 50px;
+    margin-right: 43px;
     margin-bottom: 70px;
 }
 .hero p {
@@ -382,13 +382,15 @@ html {
     vertical-align: top;
 
     margin: 0;
-    margin-left: 155px;
+    margin-left: 50px;
     margin-bottom: 15px;
 }
-
+.img {
+    width: 754px;
+}
 /*healthy*/
 .healthy {
-    background-color: #1D2432;
+    background-color: var(--primary-section-color);
     padding-top: 100px;
     padding-bottom: 100px;
 }
@@ -506,9 +508,8 @@ html {
     display: flex;
 }
 .priority-card-item li {
-    width: 350px;
-    height: 350px;
-    padding: 25px 15px;
+    width: calc((100%-150px) / 3);
+    padding: 50px 25px;
     background-color: var(--cards-color);
 }
 .priority-card-item li:not(:last-child) {
@@ -549,6 +550,13 @@ html {
     padding-top: 100px;
     padding-bottom: 100px;
 }
+.feetback-item {
+    width: 888px;
+    height: 450px;
+    padding: 202px 127px 106px;
+    background-color: var(--primary-section-color);
+    margin-left: 250px;
+}
 .feetback h2 {
     font-family: Philosopher;
     font-style: Bold;
@@ -565,6 +573,7 @@ html {
     font-size: 39px;
     line-height: 1.12;
     text-align: center;
+    color: var(--primary-text-title);
     
     margin: 0;
     margin-bottom: 25px;
@@ -576,7 +585,8 @@ html {
     font-style: Regular; 
     font-size: 20px;
     line-height: 1.3;
-    text-align: center;
+    text-align: left;
+    color: var(--primary-text-title);
 }
 /*questions*/
 .questions {
@@ -635,14 +645,17 @@ html {
     font-family: Lora;
     font-size: 20px;
     line-height: 1.3;
-    line-height: 100%;
-    text-align: left;
-    vertical-align: top;
-}
-.item {
+
     width: 314px;
     height: 130px;
     margin: 0;
+}
+.item a {
+    font-family: Lora;
+    font-size: 20px;
+    line-height: 1.3;
+    color: var(--primary-text-title);
+    text-decoration: none;
 }
 .footer-item {
     font-style: Bold;
@@ -653,17 +666,33 @@ html {
     vertical-align: top;
 }
 .footer-item p {
-    width: 459px;
+    width: 400px;
     height: 82px;
     margin: 0;
 }
-.designed {
-    font-family: Lora;
-    font-size: 20px;
-    line-height: 1.3;
-    line-height: 100%;
-    text-align: right;
+.footer-item a {
+    font-style: Bold;
+    font-size: 32px;
+    line-height: 1.28;
+    color: var(--primary-text-title);
+    text-decoration: none;
 }
+.designed {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin-right: 38px;
+}
+.designed h2 {
+    font-family: lora;
+    font-size: 20px;
+    line-height: 1,3;
+
+    text-decoration: none;
+    color: var(--primary-text-title);
+    margin-right: 16px;
+}
+
 .footer ul {
     margin: 0;
     padding: 0;
