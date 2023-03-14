@@ -35,6 +35,7 @@ html {
     margin: 0;
 }
 .container {
+    box-sizing: border-box;
     width: 1400px;
     margin: 0 auto;
     outline: 2px solid chartreuse;
@@ -223,7 +224,10 @@ html {
     padding: 0;
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    justify-content: space-between;
+
+    margin-left: 100px;
+    margin-right: 100px;
 }
 
 .sotial {
@@ -235,8 +239,9 @@ html {
     font-style: Bold;
     font-size: 20px;
     line-height: 1.3;
-    line-height: 100%;
-    vertical-align: top;
+}
+.sotial-insta a {
+    text-decoration: none;
 }
 .button {
     background-color: #3E57F3;
@@ -256,6 +261,7 @@ html {
 .button:hover {
     background-color: var(--primary-text-title);
     color: #3E57f3;
+    border: 2px solid #3E57F3;
 }
 .button:focus {
     background-color: var(--primary-text-title);
@@ -308,13 +314,6 @@ html {
     margin-right: 50px;
     margin-bottom: 70px;
 }
-/*.priority-list li {
-    width: 320px;
-    background-color: aquamarine;
-}
-.priority-list li:not(:last-child) {
-    margin-right: 20px;
-}*/
 /*cards*/
 .cards {
     padding-top: 100px;
@@ -415,12 +414,27 @@ html {
     background-color: var(--primary-section-color);
     padding: 100px 200px;
 }
-.healthy ul {
+.healthy-list {
     margin: 0;
     padding: 0;
 }
-.healthy li{
+.healthy-list li{
     display: flex;
+    align-items: flex-end;
+    margin-bottom: 100px;
+}
+.healthy-list li:nth-child(2n) {
+    flex-direction: row-reverse;    
+}
+.healthy-list li:nth-child(2n+1) p {
+    text-align: left;
+    margin-left: 50px;
+    margin-bottom: 70px;
+}
+.healthy-list li:nth-child(2n) p {
+    text-align: right;
+    margin-right: 50px;
+    margin-bottom: 70px;
 }
 .healthy-title {
     font-family: Philosopher;
@@ -434,12 +448,11 @@ html {
 
     color: var(--primary-text-title);
 } 
-.healthy p {
+.healthy-list p {
     font-family: Lora;
     font-style: Bold;
     font-size: 32px;
     line-height: 1.28;
-    text-align: left;
     color: var(--primary-text-title);
 
     margin: 0;
@@ -479,6 +492,9 @@ html {
     margin: 0;
     margin-bottom: 40px;
     
+}.program-list {
+    margin: 0;
+    padding: 0;
 }
 .program-list p {
     font-family: Lora;
@@ -503,7 +519,7 @@ html {
     padding-top: 100px;
     padding-bottom: 100px;
 }
-.program-title-text {
+.vids-text {
     font-family: Philosopher;
     font-style: Bold;
     font-size: 48px;
@@ -687,64 +703,69 @@ html {
     background-color: var( --primary-text-color);
     color: var(--primary-text-title);
     list-style: none;
-    padding: 60px 80px;
+    padding: 60px;
 }
-.item {
+.footer-item {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.offer {
+    width: 314px;
+    height: 130px;
+}
+.offer-list {
     font-family: Lora;
     font-size: 20px;
     line-height: 1.3;
 
-    width: 314px;
-    height: 130px;
     margin: 0;
 }
-.item a {
+.offer a {
     font-family: Lora;
     font-size: 20px;
     line-height: 1.3;
     color: var(--primary-text-title);
     text-decoration: none;
 }
-.footer-item {
+
+.direct-list {
+    width: 400px;
+    height: 82px;
+    font-family: lora;
     font-style: Bold;
     font-size: 32px;
     line-height: 1.28;
-    line-height: 100%;
-    text-align: left;
     vertical-align: top;
-}
-.footer-item p {
-    width: 400px;
-    height: 82px;
+    
     margin: 0;
 }
-.footer-item a {
+.direct a {
+    font-family: lora;
     font-style: Bold;
     font-size: 32px;
     line-height: 1.28;
     color: var(--primary-text-title);
+
     text-decoration: none;
 }
 .designed {
     display: flex;
     align-items: center;
     justify-content: flex-end;
+
     margin-right: 38px;
 }
-.designed h2 {
+.designed-list {
     font-family: lora;
     font-size: 20px;
-    line-height: 1,3;
+    line-height: 1.3;
 
-    text-decoration: none;
     color: var(--primary-text-title);
     margin-right: 16px;
 }
-
-.footer ul {
-    margin: 0;
-    padding: 0;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+.footer a {
+    text-decoration: none;
 }
