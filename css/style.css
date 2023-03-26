@@ -77,7 +77,8 @@ html {
     margin-right: 16px;
     align-self: center;
     content: "";
-    background-image: url("../img/inst.png");
+    background-image:  
+    url("../img/inst.png");
     background-size: contain;
 }
 .button {
@@ -111,10 +112,14 @@ html {
     justify-content: center;
     width: 100%;
     height: 1070px;
-    padding: 100px;
+    padding: 80px;
     margin-left: auto;
     margin-right: auto;
-    background-image:
+    background-image:url("../img/foto/Афинская-Школа-Рафаэль_1.png"),
+    linear-gradient(
+        to right, 
+        rgba(0, 0, 0, 0.65),
+        rgba(0, 0, 0, 0.65)),
     url("../img/foto/Афинская-Школа-Рафаэль_2.jpg");
     background-repeat: no-repeat;
     background-position: center;
@@ -267,6 +272,13 @@ html {
 .cards-list li {
     max-width: 270px;
     height: 280px;
+    background-image: url("../img/Ellipse_18.svg"),
+    url("../img/Ellipse_18.svg"),
+    url("../img/Ellipse_18.svg"),
+    url("../img/Ellipse_18.svg");
+    background-repeat: no-repeat;
+    background-position: top 6px left 6px, bottom 6px left 6px,
+     top 6px right 6px, bottom 6px right 6px;
     width: calc((100% -150px) / 4);
     padding: 30px;
     background-color: var(--cards-color);
@@ -401,21 +413,34 @@ html {
     text-align: left;
     
     margin: 0;
-    margin-right: 172px;
-    width: 676px;
 }
+/*.program-after::after {
+    display: inline-flex;
+    content: "";
+    width: 40px;
+    height: 40px;
+    align-items: center;
+    background-image: url("../img/png/Ellipse1.png");
+}*/
 .program-text-title {
     font-family: Lora;
     font-size: 20px;
     line-height: 1.3;
     text-align: center;
-    
+
     margin: 0;
+    margin-left: auto;
+    margin-right: auto;
+    width: 676px;
     margin-bottom: 40px;
     
 }.program-list {
     margin: 0;
     padding: 0;
+}
+.program-list img{
+    width: 40px;
+    height: 40px;
 }
 .program-list p {
     font-family: Lora;
@@ -426,11 +451,14 @@ html {
     margin: 0;
     padding: 0;
     margin-top: 20px;
-    width: 676px;
+    max-width: 676px;
 }
 .program-list li {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 898px;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
 }
 .program-list li:not(:last-child){
     margin-bottom: 35px;
@@ -480,6 +508,13 @@ html {
 .priority-card-list li {
     max-width: 270px;
     height: 280px;
+    background-image: url("../img/Ellipse_18.svg"),
+    url("../img/Ellipse_18.svg"),
+    url("../img/Ellipse_18.svg"),
+    url("../img/Ellipse_18.svg");
+    background-repeat: no-repeat;
+    background-position: top 6px left 6px, bottom 6px left 6px,
+     top 6px right 6px, bottom 6px right 6px;
     width: calc((100%-150px) / 3);
     padding: 30px;
     background-color: var(--cards-color);
@@ -570,6 +605,7 @@ html {
     display: flex;
     margin-left: auto;
     margin-right: auto;
+    border-radius: 50%;
 }
 /*questions*/
 .questions {
@@ -577,8 +613,12 @@ html {
     padding-bottom: 100px;
 }
 .questions li {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 898px;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
+    align-items: flex-end;
 }
 .questions li:not(:last-child){
     margin-bottom: 35px;
@@ -615,7 +655,10 @@ html {
     
     margin: 0;
     width: 736px;
-    margin-right: 112px;
+}
+.questions img {
+    width: 40px;
+    height: 40px;
 }
 .vertical {
     vertical-align: top;
